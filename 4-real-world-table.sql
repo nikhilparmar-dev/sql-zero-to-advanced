@@ -1,0 +1,15 @@
+CREATE DATABASE INDUSTRY;
+
+USE INDUSTRY;
+
+CREATE TABLE employees (
+id INT PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(100) NOT NULL,
+email VARCHAR(25) UNIQUE,
+phone_no VARCHAR(10) UNIQUE NOT NULL,
+department VARCHAR(20) NOT NULL,
+salary DECIMAL(10, 2),
+joined_on DATE,
+is_amployed ENUM('yes', 'no'),
+created_at TIMESTAMP DEFAULT NOW()
+);
